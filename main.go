@@ -3,16 +3,15 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"os"
 
 	"github.com/bwmarrin/discordgo"
 )
 
-const token string = "ODk3MDY0MzYzODM0MzQ3NTIx.YWQOSg.zegYfeDjqCTXZlkaJaeeu64Vj2A"
-
 var BotID string
 
 func main() {
-	dg, err := discordgo.New("Bot " + token)
+	dg, err := discordgo.New("Bot " + os.Args[1])
 
 	if err != nil {
 		fmt.Println(err.Error())
